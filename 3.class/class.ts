@@ -38,8 +38,8 @@ class Sample2 {
 }
 const Sample2Instance = new Sample2();
 Sample2Instance.publicField;
-Sample2Instance.protectedField;
-Sample2Instance.privateField;
+// Sample2Instance.protectedField;
+// Sample2Instance.privateField;
 
 console.log('==================================================');
 
@@ -50,14 +50,12 @@ console.log('==================================================');
 
 class Sample3 {
 
-    constructor () {
-        
-
-        public publicFIeld: string,
+    constructor (
+        public publicField: string,
         protected protectedField: string,
         private privateField: string,
         localVariable: string
-    } {}
+    ) {  }
 }
 
 console.log('==================================================');
@@ -75,7 +73,7 @@ class Sample4 {
 
 
     constructor (
-        filed2: string
+        filed2: string,
         public readonly field3: string
     ) {
         this.filed2 = filed2;
